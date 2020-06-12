@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+
+body{
+    background: url("water.svg") no-repeat;
+    background-position: center -10%;
+    background-size: 150% ;
+	font-family: 'Trebuchet MS';
+}

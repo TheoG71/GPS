@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+body {
+    background-color: rgb(12, 24, 32);
+    color: #FFFFFF;
+    font-family: 'Trebuchet MS';
+    bottom: 0px;
+}
+
+#wallpaper {
+    bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90vw;
+    height: 45vw;
+    border: solid;
+}
+
+#clouds {
+    position: relative;
+    fill: #FFFFFF;
+    z-index: -1;
+    height: 100%;
+    animation: clouds 20s linear infinite;
+    /* border-style: solid; */
+}
+
+#clouds2 {
+    position: relative;
+    fill: #FFFFFF;
+    margin-top: -500vh;
+    z-index: -1;
+    height: 100%;
+    right: -150%;
+    animation: clouds2 20s linear infinite;
+    animation-delay: 10s;
+    /* border-style: solid;
+    border-color: red; */
+}
+
+#continents {
+    position: relative;
+    margin-top: -500vh;
+    z-index: -2;
+    fill: #85CC66;
+    height: 100%;
+    animation: continents 30s linear infinite forwards;
+    /* border-style: solid;
+    border-color: #85CC66; */
+}
+
+#continents2 {
+    position: relative;
+    fill: #85CC66;
+    margin-top: -100vh;
+    z-index: -2;
+    height: 100%;
+    right: -150%;
+    animation: continents2 30s linear infinite forwards;
+    /* border-style: solid;
+    border-color: black; */
+    animation-delay: 15s;
+}
+
+#water {
+    overflow: hidden;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -3;
+    background-color: #1766aa;
+    width: 90vw;
+    height: 45vw;
+    min-width: 1200px;
+    min-height: 830px;
+    border-top-left-radius: 90vw;
+    border-top-right-radius: 90vw;
+    border-bottom: 0;
+    bottom: 0px;
+    animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes clouds {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes clouds2 {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes continents {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes continents2 {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 200%;
+    }
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1766aa, 0 0 40px #1766aa, 0 0 50px #1766aa, 0 0 60px #1766aa;
+    }
+    to {
+        box-shadow: 0 0 20px #fff, 0 0 30px #1766aa, 0 0 40px #1766aa, 0 0 50px #1766aa, 0 0 60px #1766aa;
+    }
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#convertion {
+    position: absolute;
+    /* padding: 10px; */
+    text-align: center;
+    width: 50vw;
+    top: 15vh;
+    left: 25%;
+    border-style: solid;
+    background-color: #15202B;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+}
+
+#slide {
+    display: none;
+}
+
+.box {
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 550px;
+    height: 50px;
+}
+
+.box select {
+    background-color: #24374A;
+    color: inherit;
+    padding: 10px;
+    width: 550px;
+    height: 50px;
+    border: 1px;
+    font-size: 17px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
+    -webkit-appearance: button;
+    transition: background-color .2s ease-out;
+}
+
+.box select:hover {
+    background-color: #24374A;
+}
+
+.box:before {
+    position: absolute;
+    content: "\f063";
+    font-family: FontAwesome;
+    font-size: 25px;
+    text-align: center;
+    line-height: 50px;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    pointer-events: none;
+    background-color: #2D455E;
+    transition: background-color .2s ease-out;
+}
+
+.box:hover:before {
+    background-color: #334D68;
+}
+
+#DD,
+#DMS {
+    width: 400px;
+    margin-left: 175px;
+}
+
+.field {
+    margin-left: -25%;
+    height: 2em;
+    font-size: 1em;
+    color: white;
+    border: 0;
+    background: transparent;
+    border-bottom: 2px solid #9b9b9b;
+}
+
+.field:focus {
+    border-image: linear-gradient(to right, #1766aa, #85CC66);
+    border-image-slice: 1;
+}
+
+
+/* The switch - the box around the slider */
+
+.switch {
+    margin-top: -30px;
+    margin-left: 75%;
+    position: relative;
+    display: flex;
+    width: 60px;
+    height: 31px;
+}
+
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+
+/* The slider */
+
+.slider {
+    margin-top: 5px;
+    margin-left: 10px;
+    overflow: visible;
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 18px;
+    background-color: red;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #226ED5;
+}
+
+.slider:before {
+    position: absolute;
+    text-align: center;
+    content: "N";
+    height: 22px;
+    top: 2px;
+    right: 25px;
+    width: 22px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider:before {
+    content: "S";
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+.champ2 .slider:before {
+    position: absolute;
+    text-align: center;
+    content: "O";
+    height: 22px;
+    top: 2px;
+    right: 25px;
+    width: 22px;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.champ2 input:checked+.slider:before {
+    content: "E";
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 20px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.back {
+    margin: 20px auto;
+    width: 282px;
+    height: 52px;
+    background: #24374A;
+}
+
+.champ,
+.champ2 {
+    position: relative;
+    top: 1px;
+    left: 1px;
+    right: 1px;
+    bottom: 1px;
+    background: #15202B;
+    width: 280px;
+    height: 50px;
+    transition: background-color .2s ease-out;
+}
+
+.champ:hover,
+.champ2:hover {
+    background-color: #24374A;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+
+#erreur {
+    font-size: 15px;
+    display: block;
+    margin: 25px;
+    color: red;
+    font-family: Arial;
+}
+
+#conv {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 5px;
+    color: inherit;
+    font-family: consolas;
+    font-size: 24px;
+    margin-top: 5vh;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: not-allowed;
+    letter-spacing: 4px;
+    transition: background-color .2s ease-out;
+}
+
+#conv:hover {
+    background-color: #24374A;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .5);
+}
+
+a span {
+    position: absolute;
+    display: block;
+}
+
+a span:nth-child(1) {
+    top: 0px;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #85CC66, #1766aa);
+    animation: bordure 3s linear infinite;
+}
+
+a span:nth-child(2) {
+    bottom: 0px;
+    left: -100;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #1766aa, #85CC66);
+    animation: bordure 3s linear infinite;
+}
+
+@keyframes bordure {
+    0% {
+        left: -100%;
+    }
+    75%,
+    100% {
+        left: 100%;
+    }
+}
+
+#conteneur {
+    width: 25vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 2px;
+    background: linear-gradient(90deg, #1766aa, #85CC66);
+}
+
+#result {
+    padding: 10px 5px;
+    background-color: #15202B;
+    /* box-shadow: 0 5px 25px rgba(0, 0, 0, .5); */
+}
