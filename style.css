@@ -13,8 +13,7 @@ body {
     bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    width: 90vw;
-    height: 45vw;
+    max-height: 45vh;
     border: solid;
 }
 

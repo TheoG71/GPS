@@ -24,23 +24,37 @@ $(document).ready(function() {
 
                 } else {
 
-                    var D = latitude.substring(0, 2);
-                    D = D + "°";
-                    var point = latitude.indexOf('.');
+                    var Dlat = latitude.substring(0, 2);
+                    Dlat = Dlat + "°";
 
-                    var M = latitude.substring(point, latitude.length) * 60;
-                    M = M.substring(0, 2);
-                    M = M + "'";
+                    alert(Dlat);
 
-                    var S = M.substring(3, M.length) * 60;
-                    S = S + "";
+                    var Mlat = latitude.substring(latitude.indexOf('.'), latitude.length) * 60;
+                    alert(Mlat);
 
+                    minute = Mlat.substring(0, 2);
+                    alert("ici");
+
+                    // var Slat = Mlat.substring(3, Mlat.length) * 60;
+                    // Mlat = minute + "'";
+                    // Slat = Slat + '"';
+
+                    // alert(Dlat + Mlat + Slat);
+
+                    // var Dlong = longitude.substring(0, 2);
+                    // Dlong = Dlong + "°";
+                    // var pointLong = longitude.indexOf('.');
+
+                    // var Mlong = longitude.substring(pointLong, longitude.length) * 60;
+                    // Mlong = Mlong.substring(0, 2);
+                    // Mlong = Mlong + "'";
+
+                    // var Slong = Mlong.substring(3, Mlong.length) * 60;
+                    // Slong = Slong + '"';
+
+
+                    alert(Dlat + Mlat + Slat + "-----" + Dlong + Mlong + Slong);
                 }
-
-                //attention il faut peut etre changer la structure psk il faut mettre les degrés les minutes et les secondes #fuckMyLife
-
-
-
 
 
 
