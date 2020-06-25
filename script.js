@@ -19,21 +19,22 @@ $(document).ready(function() {
                     // var coor = latitude.substring(0, 2);
                     // av = (latitude.substring(4, 5) / 60) + (+atitude.substring(6, latitude.length) / 60);
                     // alert(av);
-
+                    alert("Work in progress !");
 
 
                 } else {
 
+                    alert("Work in progress !");
                     var Dlat = latitude.substring(0, 2);
                     Dlat = Dlat + "°";
 
-                    alert(Dlat);
+                    // alert(Dlat);
 
                     var Mlat = latitude.substring(latitude.indexOf('.'), latitude.length) * 60;
-                    alert(Mlat);
+                    // alert(Mlat);
 
                     minute = Mlat.substring(0, 2);
-                    alert("ici");
+
 
                     // var Slat = Mlat.substring(3, Mlat.length) * 60;
                     // Mlat = minute + "'";
@@ -57,29 +58,6 @@ $(document).ready(function() {
                 }
 
 
-
-                var phrase = "les choix sont = " + choix + " avec " + latitude;
-                if ($("#nordsud").is(":checked")) {
-
-                    var ns = "S";
-                    phrase = phrase + "S";
-
-                } else {
-                    var ns = "N";
-                    phrase = phrase + "N";
-                }
-
-                if ($("#ouestest").is(":checked")) {
-
-                    var ew = "E";
-                    phrase = phrase + "/" + longitude + "E";
-
-                } else {
-                    var ew = "W";
-                    phrase = phrase + "/" + longitude + "W";
-                }
-
-                alert(phrase);
             }
 
         } else {

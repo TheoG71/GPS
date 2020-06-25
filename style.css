@@ -13,8 +13,8 @@ body {
     bottom: 0px;
     margin-left: auto;
     margin-right: auto;
-    max-height: 45vh;
-    border: solid;
+    /* max-height: 45vh;
+    border: solid; */
 }
 
 #clouds {
@@ -137,7 +137,7 @@ h1 {
     width: 50vw;
     top: 15vh;
     left: 25%;
-    border-style: solid;
+    /* border-style: solid; */
     background-color: #15202B;
     box-shadow: 0 5px 25px rgba(0, 0, 0, .5);
 }
